@@ -14,7 +14,13 @@ jobs:
     steps:
       - name: Checkout the files
         uses: actions/checkout@v2
-        
+               
+      - name: create vi
+        run: |
+          sudo systemctl status apache2
+          sudo systemctl start apache2
+          
+         
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
@@ -22,9 +28,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-          
-      - name: create vi
-        run: |
-          sudo systemctl status apache2
                  
    
