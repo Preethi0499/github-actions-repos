@@ -15,7 +15,7 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
         
-      - name: Install Apache
+      - name: create vi
         run: |
           sudo vi apache
         
