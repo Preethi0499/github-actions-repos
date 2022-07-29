@@ -15,9 +15,9 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
                
-      - name: create vi
+      - name: create dockerfile
         run: |
-          docker build -t Dockerfile
+          docker build -t dockerfile
 
       #- name: Deploy to Server 1
       #  uses: easingthemes/ssh-deploy@main
