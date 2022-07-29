@@ -17,7 +17,7 @@ jobs:
                
       - name: create dockerfile
         run: |
-          docker build -t apache2:latest ./Dockerfile
+          docker build -t apache2:latest /home/runner/work/github-actions-repos/github-actions-repos/Dockerfile
 
       #- name: Deploy to Server 1
       #  uses: easingthemes/ssh-deploy@main
