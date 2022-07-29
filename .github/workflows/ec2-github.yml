@@ -26,6 +26,7 @@ jobs:
       - name: create vi
         run: |
           pwd
+          sudo vi naano
           sudo apt-get update
                  
    
