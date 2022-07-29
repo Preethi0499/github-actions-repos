@@ -15,9 +15,12 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
         
-      - name: type ls
-        run: ls
-
+      - name: Install Apache
+        run: |
+          pwd
+          sudo apt update
+          sudo apt install apache2 -y 
+        
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
